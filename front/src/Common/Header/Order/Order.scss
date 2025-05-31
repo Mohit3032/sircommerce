@@ -1,0 +1,208 @@
+@import '../../mixins.scss';
+
+.order-container {
+
+  .order-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  .order-center {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .order-item {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px;
+
+      .firstline {
+        margin: 10px 0;
+        padding: 0;
+        display: flex;
+        gap: 30px;
+        font-size: 16px;
+        color: #555;
+        border-bottom: 1px solid #e0e0e0;
+        text-wrap: balance;
+
+        strong {
+          color: black;
+
+          @include ss {
+            font-size: 12px;
+          }
+        }
+
+        @include ss {
+          font-size: 14px;
+          gap: 15px;
+        }
+      }
+
+      &-details {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        padding: 5px 0;
+        position: relative;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        .rvfrm {
+          margin: 0 20px;
+        
+        }
+
+        .track {
+          @include ss {
+            display: none;
+          }
+
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          translate: 0 -50%;
+          display: flex;
+          flex-direction: column;
+
+          button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: #555;
+            padding: 0;
+            margin: 5px;
+
+
+            &:hover {
+              border-bottom: .5px solid #55555579;
+            }
+          }
+        }
+
+        img {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          cursor: pointer;
+          border-radius: 8px;
+
+          @include m800 {
+            width: 80px;
+            height: 150px;
+
+          }
+        }
+
+        .imp-details {
+
+          padding: 10px;
+
+          h3 {
+            margin: 0;
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding: 0;
+            text-wrap: nowrap;
+            overflow: hidden;
+
+            @include ss {
+              font-size: 16px;
+              margin-bottom: 8px;
+            }
+
+            @include cardmd {
+              font-size: 15px;
+            }
+          }
+
+          p {
+            margin-bottom: 5px;
+            font-size: 16px;
+
+            @include ss {
+              font-size: 14px;
+            }
+
+            color: #555;
+          }
+
+          .pric {
+            color: black;
+          }
+
+          .track23 {
+            @include ss {
+              display: flex;
+            }
+
+            display: none;
+            width: 100%;
+            justify-content: space-between;
+
+            button {
+              background-color: transparent;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              color: #555;
+              padding: 0;
+              margin: 5px;
+              margin-left: 0;
+
+
+              &:hover {
+                border-bottom: .5px solid #55555579;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .order-empty {
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    &-text {
+      font-size: 18px;
+      color: #999;
+      margin-bottom: 20px;
+    }
+
+    .order-btn {
+      background-color: black;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}

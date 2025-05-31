@@ -1,0 +1,139 @@
+
+@mixin mybtn{
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    padding: 7px;
+    border: 1px solid black;
+    @include min800{
+
+        &:hover {
+            background-color: white;
+            border: 1px solid black;
+            border-collapse: collapse;
+            color: black;
+            cursor: pointer;
+            transition: all .4s;
+        }
+    }
+
+    @include cardmd{
+        font-size: 14px;
+    }
+}
+
+
+@mixin big {
+    @media only screen and (max-width: 1165px) {
+        @content;
+    }
+    
+    }
+
+@mixin m1025 {
+    @media only screen and (max-width: 1025px) {
+        @content;
+    }
+    }
+@mixin m1066 {
+    @media only screen and (max-width: 1066px) {
+        @content;
+    }
+    }
+@mixin m800 {
+    @media only screen and (max-width: 800px) {
+        @content;
+    }
+    }
+
+@mixin min800 {
+    @media only screen and (min-width: 800px) {
+        @content;
+    }
+    }
+
+@mixin m550 {
+    @media only screen and (max-width: 550px) {
+        @content;
+    }
+    }
+@mixin m432 {
+    @media only screen and (max-width: 420px) {
+        @content;
+    }
+    }
+
+
+
+@mixin sm {
+@media only screen and (min-width: 640px) {
+    @content;
+}
+}
+
+@mixin ssm {
+    @media only screen and (min-width: 1058px) {
+        @content;
+    }}
+
+
+@mixin md {
+@media only screen and (min-width: 768px) {
+    @content;
+}
+}
+
+@mixin m950{
+    @media only screen and (max-width: 950px) {
+        @content;
+    }
+    }
+
+@mixin mv {
+@media only screen and (max-width: 768px) {
+    @content;
+}
+}
+
+
+@mixin cardmd {
+@media only screen and (max-width: 540px) {
+    @content;
+}
+}
+
+@mixin m460 {
+    @media only screen and (max-width: 460px) {
+        @content;
+    }
+    }
+@mixin me {
+@media only screen and (max-width: 768px) {
+    @content;
+}
+}
+@mixin m720 {
+@media only screen and (max-width: 730px) {
+    @content;
+}
+}
+
+@mixin cardf {
+@media only screen and (max-width: 500px) {
+    @content;
+}
+}
+@mixin cardf2 {
+@media only screen and (min-width: 500px) {
+    @content;
+}
+}
+
+@mixin ss {
+@media only screen and (max-width: 640px) {
+    @content;
+}
+}
+

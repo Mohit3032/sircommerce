@@ -1,0 +1,134 @@
+/* Chatbot container */
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background-color: #f9f9f9;
+
+  /* Messages area */
+  .chatbot-messages {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    scrollbar-width: none; 
+
+    /* Individual chat message */
+    .chat-message {
+      max-width: 75%;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 15px;
+      word-wrap: break-word;
+    }
+    
+    .bot-message {
+      background-color: #e0e0e0;
+      color: #333;
+      align-self: flex-start;
+    }
+    
+    .user-message {
+      background-color: #007bff;
+      color: #fff;
+      align-self: flex-end;
+    }
+  }
+  
+  .chatbot-messages::-webkit-scrollbar {
+    display: none; 
+  }
+
+  /* Fixed text box at bottom */
+  .text-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    padding: 12px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+
+    input {
+      flex: 1;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  /* Options area */
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+  }
+
+  /* Option button */
+  .options button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .options button:hover {
+    background-color: #0056b3;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .chatbot-container {
+    height: 90vh;
+    max-width: 100%;
+  }
+
+  .text-box {
+    padding: 10px;
+  }
+
+  .text-box input {
+    font-size: 0.9rem;
+  }
+
+  .text-box button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}

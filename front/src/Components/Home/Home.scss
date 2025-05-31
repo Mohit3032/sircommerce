@@ -1,0 +1,25 @@
+
+.home-main{
+ box-sizing: border-box;
+ max-width: 1600px;
+ margin: 30px auto;
+ padding: 0;
+    h2{
+        text-align: center;
+        margin: 2rem 0 2rem 0;
+    }
+  .home-products{
+    padding: 10px;
+     box-sizing: border-box;
+   width: 100%;
+   margin: 0 auto;
+   .size-warn{
+    padding-top : 0;   }
+   .ps{
+    .p1{
+        margin: 0;
+        padding: 0;
+    }
+   }
+  }
+}

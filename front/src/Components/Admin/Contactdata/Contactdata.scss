@@ -1,0 +1,27 @@
+.radios {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  margin: 20px;
+  align-items: center;
+
+  label {
+    cursor: pointer;
+    input {
+      cursor: pointer;
+    }
+  }
+
+  .tables {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgba(0, 0, 0, 0.596);
+    font-size: 1rem;
+  }
+}
+
+.maxraw {
+  width: 300px;
+
+}

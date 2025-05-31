@@ -1,0 +1,63 @@
+
+
+@import '../mixins.scss';
+.alert {
+    background-color:  rgba(88, 83, 83, 0.87);;
+    
+    color: white;
+    border: 1px solid rgba(128, 128, 128, 0.489);
+    height: fit-content;
+    width: fit-content;
+    text-wrap: nowrap;
+    z-index: 9999;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: sans-serif;
+    position: fixed;
+    right: 8%;
+    top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    animation: alert-open .5s forwards;
+   
+   @include m550{
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    animation: vibrate .5s forwards;
+   }
+
+}
+
+
+
+
+@keyframes alert-open {
+    0% { transform: translateY(0%) ;}
+    100% {transform: translateY(100%);}
+}
+
+
+@keyframes vibrate {
+    0% {
+      transform: translateX(-50%) translateY(0);
+    }
+    20% {
+      transform: translateX(-55%) translateY(0); 
+    }
+    40% {
+      transform: translateX(-50%) translateY(2px);  
+    }
+    60% {
+      transform: translateX(-45%) translateY(0); 
+    }
+    80% {
+      transform: translateX(-50%) translateY(-2px); 
+    }
+    100% {
+      transform: translateX(-50%) translateY(0);    
+    }
+  }

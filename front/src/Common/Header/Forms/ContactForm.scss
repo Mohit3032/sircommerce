@@ -1,0 +1,168 @@
+@import "../../mixins.scss";
+
+
+.contact-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    .buttons {
+        margin: 7px 0;
+        font-size: 12px;
+        display: flex;
+        gap: 5px;
+        div {
+            display: flex;
+            align-items: center;
+            .p1 {
+                display: inline;
+                align-items: center;
+
+            }
+        }
+
+        input {
+            align-self: center;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+
+    }
+
+    .contact-form {
+
+        display: flex;
+        padding: 20px 20px;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 30px;
+        flex: 1 1 300px;
+
+        h1 {
+            text-align: center;
+            margin: 0;
+        }
+
+        label {
+            text-wrap: nowrap;
+        }
+
+        h3 {
+            margin: 5px 0;
+        }
+
+        span {
+            width: 100%;
+            font-size: 0.9rem;
+            display: flex;
+            gap: 8px;
+            align-self: flex-end;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            margin: 5px 0;
+
+            .error {
+                display: flex;
+                font-size: .8rem;
+                text-align: left;
+                text-wrap: nowrap;
+                position: absolute;
+                top: 37px;
+                left: 30%;
+
+            }
+
+            .err {
+                left: 34%;
+            }
+
+            .mserr {
+                top: 62px;
+            }
+
+            .field1 {
+                padding: 7px .7rem;
+                border-radius: 5px;
+                justify-self: flex-end;
+                font-size: medium;
+                border: .5px solid rgba(0, 0, 0, 0.194);
+                outline: none;
+
+                &::placeholder {
+                    font-size: 0.9rem;
+                }
+
+            }
+
+            .field2 {
+
+                border: none;
+                width: 207px;
+                justify-self: flex-end;
+                align-self: flex-end;
+            }
+
+            #message {
+                width: 100%;
+                height: 60px;
+                resize: none;
+                // box-sizing: border-box;
+
+            }
+
+            #ms3 {
+                width: 220px;
+                height: 60px;
+                resize: none;
+                box-sizing: border-box;
+            }
+
+            #ms2 {
+                width: 220px;
+                height: 60px;
+                resize: none;
+                box-sizing: border-box;
+            }
+
+        }
+
+        #reason {
+            width: 220px;
+            padding: 7px .7rem;
+            border-radius: 5px;
+            font-size: medium;
+            border: .5px solid rgba(0, 0, 0, 0.194);
+            outline: none;
+        }
+
+        .loginbtn {
+            background-color: black;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            padding: 7px;
+            border: 1px solid black;
+            width: 73%;
+            margin: 8px;
+
+            &:hover {
+                background-color: white;
+                border: 1px solid black;
+                border-collapse: collapse;
+                color: black;
+                cursor: pointer;
+                transition: all .4s;
+            }
+        }
+    }
+
+
+}

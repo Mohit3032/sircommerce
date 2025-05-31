@@ -1,0 +1,95 @@
+@import '../../../mixins.scss';
+
+.review-main{
+    position: relative;
+
+  .review-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    
+    box-sizing: border-box;
+    @include m800{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+  }
+  
+
+  
+
+
+
+  .span {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 5px;
+    @include min800{
+
+        align-items: center;
+    }
+
+    .star-rating {
+        display: flex;
+        
+        @include min800{
+            
+          justify-content: center;
+      }
+  
+      svg {
+        font-size: 1rem;
+        margin: 0 2px;
+      }
+    }
+  }
+  
+  .str-spn{
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    @include min800{
+        justify-content: space-evenly;
+
+    }
+    
+  }
+  .field1 {
+    width: 100%;
+    height: 40px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    resize: none;
+    padding: 4px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+ 
+  }
+  
+  .error {
+    font-size: 0.8rem;
+    color:black;
+    margin-left: -5px;
+  }
+  
+  .loginbtn {
+    background-color: #000;
+    color: #fff;
+    font-size: 0.9rem;
+    padding-top:5px ;
+
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+width: min-content;
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}

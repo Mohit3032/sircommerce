@@ -1,0 +1,505 @@
+@import "../../Common/mixins.scss";
+
+
+.main-header {
+
+    padding: 0 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.194);
+    z-index: 99;
+
+    @include md {
+        padding: 0 30px
+    }
+
+    &.whiteclr {
+        background-color: #87CEFA;
+        border-bottom: none;
+
+        img {
+            filter: invert(1);
+        }
+
+        .header-content .center .search-box {
+            background-color: white;
+        }
+
+        .header-content .right .accounti {
+
+            color: white;
+
+            .wishs {
+                fill: white;
+            }
+
+            .prp {
+                color: #000000;
+            }
+
+            .cart-num {
+                color: #000000;
+                background-color: white;
+            }
+        }
+
+        .svgs {
+            color: white;
+        }
+
+        .belogin {
+            filter: invert(1);
+        }
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        position: relative;
+        margin: 0 auto;
+
+        @include md {
+            height: 66px;
+        }
+
+        .left {
+            width: 8%;
+            max-width: 152px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include cardmd {
+                width: 19%;
+            }
+
+            img {
+                max-height: 100px;
+                height: auto;
+                display: block;
+                width: 100%;
+                user-select: none;
+            }
+        }
+
+        .center {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            left: 50%;
+            translate: -50%;
+            box-sizing: border-box;
+            width: 40%;
+            max-width: 400px;
+            z-index: 50;
+
+
+            .cart-text {
+                letter-spacing: 3px;
+                font-size: 12px;
+                font-weight: bold;
+                color: rgba(0, 0, 0, 0.635);
+                line-height: 15px;
+                text-wrap: nowrap;
+
+                @include ss {
+                    display: none;
+                }
+            }
+
+            @include cardf {
+                display: none;
+            }
+
+            @include ss {
+                width: 35%;
+            }
+
+            .search-box {
+                background-color: rgba(0, 0, 0, 0.035);
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                padding: .7rem 0;
+                max-width: 400px;
+                padding-left: 2rem;
+                width: max(100px, 100%);
+                box-sizing: border-box;
+                font-size: medium;
+
+
+                &:focus {
+                    background-color: #ffffff;
+                    border: .1px solid rgba(128, 128, 128, 0.479);
+
+                }
+
+                &:focus~.imgnry-placeholder {
+                    visibility: hidden;
+                    /* Hides the placeholder */
+                    opacity: 0;
+                    /* Smooth transition */
+                    transition: opacity 0.3s ease;
+                }
+
+                @include ss {
+                    padding: .4rem 0;
+                    padding-left: 2rem;
+                }
+
+
+
+            }
+
+            .imgnry-placeholder {
+                position: absolute;
+                left: 40px;
+                color: rgba(128, 128, 128);
+                pointer-events: none;
+                transition: opacity 0.3s ease;
+                white-space: nowrap;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                @include ss {
+                    left: 25px;
+                    font-size: 14px;
+                }
+
+                @include m550 {
+                    font-size: 12px;
+                }
+
+                .imgnry-placeholder-value {
+                    margin-left: 5px;
+                    display: inline-block;
+                    overflow: hidden;
+                    white-space: nowrap;
+
+                    .animate {
+                        // display: inline-block;
+                        overflow: hidden;
+                        border-right: 2px solid orange;
+                        /* Cursor effect */
+                        width: 0;
+                        /* Ensure it starts at 0 */
+                        animation: typing 1s steps(20, end) forwards;
+                    }
+                }
+
+                /* The typing effect */
+                @keyframes typing {
+                    from {
+                        width: 0;
+                    }
+
+                    to {
+                        width: 100%;
+                    }
+                }
+
+                // /* The typewriter cursor effect */
+                // @keyframes blink-caret {
+                //     50% {
+                //         border-color: transparent;
+                //     }
+                // }
+            }
+
+
+
+
+
+            .src {
+                font-size: 18px;
+                position: absolute;
+                left: 8px;
+                cursor: pointer;
+                transform: scaleX(-1);
+
+            }
+
+            .srchbar {
+                position: absolute;
+                margin: 0 auto;
+                top: 32px;
+                outline: none;
+                padding: 0.7rem 0;
+                max-width: 400px;
+                width: max(100px, 100%);
+                border-radius: 10px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                height: min-content;
+                max-height: 400px;
+                scrollbar-width: thin;
+                overflow-y: auto;
+                background-color: white;
+                border: .6px solid rgba(0, 0, 0, 0.194);
+                border-top: none;
+                box-sizing: border-box;
+                z-index: 50;
+
+                @include ss {
+                    padding-top: .2rem;
+                    top: 25px;
+                }
+            }
+
+        }
+
+
+        .right {
+            display: flex;
+            align-items: center;
+            align-self: center;
+            gap: 15px;
+
+            .secure {
+                display: flex;
+                align-items: center;
+                gap: 3px;
+                font-size: 12px;
+                letter-spacing: 3px;
+            }
+
+            @include md {
+                gap: 25px
+            }
+
+
+
+            .accounti {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                transition: transform .5s;
+                width: 50px;
+                position: relative;
+
+                @include ss {
+                    width: 35px;
+                }
+
+                .lin-name {
+                    @include m800 {
+                        display: none;
+                    }
+                }
+
+                .cart-num {
+                    position: absolute;
+                    top: 0;
+                    right: 10%;
+                    border: .6px solid rgba(128, 128, 128, 0.479);
+                    border-radius: 50%;
+                    font-size: 10px;
+                    background-color: #000000;
+                    color: white;
+                    padding: 2px 4px;
+
+                    @include mv {
+                        top: 15%;
+                    }
+
+                }
+
+                .prp {
+                    display: block;
+                    position: absolute;
+                    top: 42px;
+                    margin: 0;
+                    z-index: 4;
+                    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.129)
+                }
+
+                .accounti:hover .prp {
+                    display: block;
+                }
+
+                @include mv {
+                    padding: 10px 0;
+                }
+
+                span {
+
+                    font-size: smaller;
+                    font-weight: 500;
+
+                    padding: 3px;
+                    width: max-content;
+
+
+                }
+
+
+
+            }
+
+            .belogin {
+
+
+                padding: 0;
+                box-sizing: border-box;
+
+                .login {
+                    margin: -8px -8px;
+                    margin-top: -12px;
+                    padding: 8px 8px;
+                    font-size: 14px;
+                    display: flex;
+                    cursor: pointer;
+                    box-sizing: border-box;
+
+                    &>span {
+                        font-size: 16px;
+                    }
+
+                    .login-icn {
+                        font-size: 17px;
+
+
+                        @include cardf {
+                            font-size: 16px;
+                        }
+
+                    }
+
+                    @include md {
+                        font-size: 20px;
+                        transition: transform .5s;
+
+                    }
+
+                    @include min800 {
+
+                        &:hover {
+                            background-color: #000000;
+                            color: #ffffff;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+
+                .lgntxt {
+                    @include ss {
+                        display: none;
+                    }
+                }
+
+            }
+
+            .svgs {
+                cursor: pointer;
+
+                @include md {
+                    transition: transform .5s;
+
+                    &:hover {
+                        transform: matrix(1.2, 0, 0, 1, 0, 0);
+
+                    }
+                }
+            }
+
+            .wishs {
+                fill: black;
+            }
+
+
+        }
+    }
+
+
+    &.sticky-header {
+        position: sticky;
+        top: 0;
+        animation: stickyHeader 0.3s ease forwards;
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+@keyframes stickyHeader {
+    0% {
+        transform: translateY(-80px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+.serch2 {
+
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+    gap: 0;
+    box-sizing: content-box;
+
+    @include cardf2 {
+        display: none;
+    }
+
+    .srchbar2 {
+        width: 100%;
+        min-height: 16px;
+        max-height: 400px;
+        scrollbar-width: thin;
+        position: absolute;
+        top: 33px;
+        left: 0;
+        font-size: medium;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.194);
+        border-top: none;
+        border-radius: 20px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        box-sizing: border-box;
+        z-index: 50;
+    }
+
+    .search-box2 {
+
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.194);
+        border-radius: 20px;
+        outline: none;
+
+        padding: .5rem 2.5rem;
+        width: 100%;
+        font-size: medium;
+
+        &:focus {
+            background-color: #ffffff;
+
+        }
+
+
+    }
+
+    .src2 {
+        font-size: 20px;
+        position: absolute;
+        left: 16px;
+        cursor: pointer;
+        transform: scaleX(-1);
+
+    }
+}

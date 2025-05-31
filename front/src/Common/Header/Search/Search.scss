@@ -1,0 +1,35 @@
+@import '../../mixins.scss';
+.search-lists {
+ 
+  p {
+    padding: 10px 0;
+    padding-left: 2rem;
+    margin: 0;
+    position: relative;
+    @include cardf {
+  
+      padding-left: 2.5rem;
+    }
+
+    .history {
+      position: absolute;
+      left: 8px;
+      transform: scaleX(-1);
+      color: rgba(0, 0, 0, 0.806);
+
+      font-size: 16px;
+      @include cardf {
+  
+        left: 16px;
+      }
+    }
+
+    // width: 100%;
+    &:hover {
+      background-color: rgba(163, 150, 150, 0.094);
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 20px;
+      cursor: pointer;
+    }
+  }
+}

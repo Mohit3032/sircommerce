@@ -1,0 +1,23 @@
+@import '../../../Common/mixins.scss';
+
+
+.sipd{
+    @include mybtn;
+    padding: 5px;
+    margin: 5px;
+
+    &:disabled{
+        background-color: rgba(0, 0, 0, 0.598);
+        color: white;
+        cursor: not-allowed;
+        border: none;
+    }
+}
+
+
+.address-col{
+    max-width: 300px;
+    overflow-x: auto;
+    
+   
+}

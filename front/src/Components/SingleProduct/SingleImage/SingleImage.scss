@@ -1,0 +1,114 @@
+@import '../../../Common/mixins.scss';
+.main2{
+    display: none;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    .slider-div{
+      
+        .slider-img{
+        max-height: 450px;
+        }
+    }
+    @include m800{
+        display: block;
+        .slider-div{
+            max-height: 390px;
+          
+            .slider-img{
+                max-height: 390px;
+                object-fit: contain;
+                }
+        }
+    }
+}
+
+.main1 {
+    display: flex;
+    gap: 15px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+justify-content: space-between;
+    @include m800 {
+        gap: 0;
+        display: none;
+
+    }
+
+}
+
+.box-main {
+    justify-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+
+    width: min-content;
+
+    .box {
+        @include m800 {
+            display: none;
+            margin: 0;
+        }
+
+        overflow: hidden;
+        height: 50px;
+        width: 50px;
+        padding: 4px;
+
+        img {
+            object-fit: cover;
+        }
+
+    }
+}
+
+#change{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+@include m1066{
+object-fit: fill;
+}
+}
+
+/* Custom styles for the modal overlay */
+.custom-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Custom styles for the modal content */
+  .custom-modal {
+    background: white;
+    padding: 20px;
+    max-width: 90%;
+    max-height: 90%;
+    height: 100%;
+    overflow: auto;
+    border-radius: 10px;
+    position: relative;
+
+  }
+  
+  .zoomed-image-container{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  /* Optional: Style for zoomed image */
+  .zoomed-img {
+    width: 100%;
+    height: auto;
+    scale: 1.5;
+    object-fit: contain;
+  }
+  

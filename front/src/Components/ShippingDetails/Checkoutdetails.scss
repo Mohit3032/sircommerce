@@ -1,0 +1,141 @@
+@import '../../Common/mixins.scss';
+
+.cart-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+    .pay-infos {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+
+        p {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+            border-bottom: .2px solid rgba(128, 128, 128, 0.0879);
+            ;
+        }
+    }
+
+    .subtotal {
+        padding: 10px 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+
+        @include m800 {
+            display: none;
+        }
+
+        .text {
+            margin-bottom: 0;
+            font-size: 20px;
+            color: #000000bb;
+            font-weight: 700;
+            text-transform: uppercase;
+
+        }
+    }
+
+    .button {
+        padding: 10px 15px;
+
+        @include m800 {
+            display: none;
+        }
+
+        .checkout-cta {
+            @include mybtn;
+            outline: 0;
+            z-index: 100;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #000000;
+            color: white;
+            font-size: 15px;
+       
+
+            &:disabled{
+                cursor: not-allowed;
+                background-color: #000000b1;
+                border-color:  #000000b1;
+                &:hover{
+                    background-color: #000000b1;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .small-scrn-btn {
+        display: none;
+
+        @include m800 {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            box-sizing: border-box;
+            z-index: 100;
+            gap: 5px;
+            width: 100%;
+           
+        }
+
+        .subtotal2 {
+           
+            box-sizing: border-box;
+            width: 50%;
+            padding: 10px 15px;
+          
+            display: flex;
+            gap: 20px;
+            background-color: white;
+            .text {
+                margin-bottom: 0;
+                font-size: 1.2rem;
+                color: #000000bb;
+                font-weight: 700;
+                text-transform: uppercase;
+
+            }
+        }
+
+        .checkout-cta2 {
+            box-sizing: border-box;
+            @include mybtn;
+            width: 50%;
+            outline: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #000000;
+            color: white;
+            font-size: 15px;
+            &:disabled{
+                cursor: not-allowed;
+                background-color: #000000b1;
+                border-color:  #000000b1;
+                &:hover{
+                    background-color: #000000b1;
+                    color: white;
+                }
+            }
+
+        }
+    }
+}

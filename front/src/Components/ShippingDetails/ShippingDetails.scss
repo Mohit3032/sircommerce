@@ -1,0 +1,103 @@
+@import '../../Common/mixins.scss';
+
+
+.shipinfos {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1600px;
+    margin: auto;
+
+    @include m800 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .checkout-comp {
+        position: sticky;
+        top: 30%;
+        margin: 20px 15px;
+        padding: 10px;
+        height: max-content;
+        width: 30%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+
+        @include m800 {
+            width: 70%;
+        }
+    }
+
+
+
+}
+
+.shipping-details {
+    width: 500px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    @include m800 {
+        width: 100%;
+
+    }
+
+    .add-new {
+        @include mybtn;
+        width: max-content;
+        align-self: center;
+        font-size: 14px;
+        margin: 10px 0;
+
+        @include m800{
+            font-size: 12px;
+           
+        }
+    }
+
+    h2 {
+        text-align: center;
+        margin: 0 0 10px 0;
+        padding: 10px;
+    }
+
+    .address-all {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+
+        .address1 {
+            width: 100%;
+
+            p {
+                margin: 8px 10px;
+
+            }
+        }
+
+        .add {
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            display: flex;
+
+            .radio-add {
+                margin: 10px;
+                cursor: pointer;
+            }
+
+            button {
+                @include mybtn;
+                margin: 10px;
+                font-size: 12px;
+                padding: 5px;
+                @include m800{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

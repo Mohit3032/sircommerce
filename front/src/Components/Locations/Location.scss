@@ -1,0 +1,129 @@
+@import '../../Common/mixins.scss';
+
+.location-main {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  .banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #87CEFA;
+    padding: 30px 20px;
+
+    .banner-text {
+
+      font-size: 2rem;
+      text-wrap: balance;
+      font-weight: 600;
+      color: white;
+    }
+
+    .banner-text h1 {
+      margin: 1rem;
+    }
+
+  }
+
+  .home-products {
+    padding: 10px;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 20px auto;
+    position: relative;
+    max-width: 1600px;
+h2{
+  margin: 0 1rem;
+  margin-bottom:10px ;
+}
+    .size-warn {
+      padding-top: 0;
+    }
+
+    .ps {
+      .p1 {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .react-multiple-carousel__arrow--left {
+      left: 88%;
+      top: 0;
+
+
+      @include m1066 {
+        left: 80%;
+
+      }
+
+      @include ss {
+        left: 75%;
+
+      }
+
+      @include cardmd {
+        left: 65%;
+      }
+    }
+
+    .react-multiple-carousel__arrow--right {
+      right: 1rem;
+      top: 0;
+    }
+
+    .react-multiple-carousel__arrow {
+      position: absolute;
+      outline: 0;
+      transition: all .5s;
+      border-radius: 50%;
+      z-index: 1;
+      border: 0;
+      background: rgba(0, 0, 0, 0.07);
+      min-width: 35px;
+      min-height: 35px;
+      opacity: 1;
+      top: 0;
+      color: black;
+      cursor: pointer;
+      &:hover{
+        background-color: #0000001e;
+      }
+    }
+
+    .react-multiple-carousel__arrow::before {
+
+      color: black;
+      display: block;
+
+      text-align: center;
+      z-index: 2;
+      position: relative;
+    
+    }
+
+    .slider-divs {
+    
+      margin: 3rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
+      border-radius: 20px;
+
+      .slider-img {
+        height: 300px;
+        min-width: 300px;
+        object-fit: cover;
+        margin: 0;
+        padding: 0;
+        @include cardmd{
+          height: 250px;
+          width: 250px;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,131 @@
+@import '../../../Common/mixins.scss';
+
+.faq-main {
+
+    margin: 30px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+
+    &>h1 {
+        font-size: 1.9rem;
+
+        @include m800 {
+            font-size: 1.7rem;
+
+        }
+
+        @include cardmd {
+            font-size: 1.5rem;
+        }
+    }
+
+    &>p {
+        margin-bottom: 40px;
+        color: #667085;
+        font-size: 18px;
+
+        @include m800 {
+            font-size: 16px;
+        }
+
+    }
+
+    .acobox {
+    padding-top: 10px;        margin-bottom: 40px;
+    }
+
+    .acobox .que-ans {
+        margin: 20px auto;
+        width: 60%;
+        text-align: left;
+        border-bottom: 1px solid #EAECF0;
+
+        @include m800 {
+            width: 70%;
+        }
+
+        ;
+
+        @include cardmd {
+            width: 100%;
+        }
+
+        .aero {
+            cursor: pointer;
+        }
+
+        .qns {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+
+            .question {
+                margin: 5px 0;
+                padding: 5px;
+                margin-bottom: 0;
+                font-size: 16px;
+                font-weight: 500;
+                cursor: pointer;
+
+            }
+        }
+
+        .answer {
+            color: #667085;
+            margin: 5px 0;
+            padding: 5px;
+            padding-right: 20px;
+
+            @include m800 {
+                padding-right: 5px;
+            }
+        }
+    }
+
+    .chatwithus {
+        margin: 30px auto;
+        padding: 20px;
+        border-radius: 1rem;
+        background-color: #F9FAFB;
+        width: 90%;
+        @include cardmd{
+            width: 100%;
+        }
+
+        .avatars {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 52px;
+            position: relative;
+
+            .avts {
+                margin: 0 -8px;
+                border: 2px solid white;
+
+            }
+
+            .mid-avt {
+                align-self: flex-start;
+                z-index: 2;
+            }
+        }
+
+        h4 {
+            padding: 10px 0;
+            padding-bottom: 0;
+        }
+
+        p {
+            color: #667085;
+            padding-bottom: 10px
+        }
+
+        .git-btn {
+            @include mybtn;
+        }
+    }
+}

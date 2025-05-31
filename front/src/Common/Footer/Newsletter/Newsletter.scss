@@ -1,0 +1,62 @@
+@import "../../../Common/mixins.scss";
+
+.newsletter-section {
+
+
+    width: fit-content;
+    justify-content: center;
+
+    display: flex;
+    align-items: center;
+
+    @include m1025 {
+        margin: 30px 10px;
+    }
+
+    .newsletter-content {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .small-text {
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        color: rgba(208, 16, 16, 0.5);
+    }
+
+    .big-text {
+        margin-bottom: 20px;
+        font-size: 10px !important;
+        line-height: 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        @include md {
+            font-size: 28px;
+
+        }
+    }
+
+    .form {
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto;
+            margin-bottom: 10px; 
+
+            @include mybtn ;
+        }
+
+        form {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+ @import '../../Common/mixins.scss';
+
+
+
+ .categories {
+     display: grid;
+     grid-template-columns: 2fr 1fr 1fr 2fr;
+     gap: 10px;
+     margin: 0;
+     padding: 0 20px;
+
+     @include ss {
+         grid-template-columns: 1fr 1fr;
+
+     }
+
+
+     .category {
+         max-height: 68vh;
+         background-color: black;
+         border-radius: 20px;
+         border: none;
+         box-sizing: border-box;
+         transition: all ease 0.3s;
+         overflow: hidden;
+         cursor: pointer;
+
+         .skel {
+             height: 100%;
+             background-color: rgb(222, 215, 215);
+             width: 100%;
+          
+             @include m720{
+                max-height: 230px;
+            }
+             .dummydiv{
+                height: 100%;
+                width: 100%;
+                padding: 100%;
+                box-sizing: border-box;
+             
+             }
+         }
+
+         @include md {
+             &:hover {
+
+                 border: 0.5px solid rgba(15, 15, 15, 0);
+
+
+             }
+
+         }
+
+         img {
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+             display: block;
+             transition: all ease 0.3s;
+
+             @include md {
+                 &:hover {
+                     opacity: 0.9;
+                 }
+             }
+         }
+
+
+     }
+ }
