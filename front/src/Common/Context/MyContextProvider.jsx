@@ -122,8 +122,8 @@ const MyContextProvider = ({ children }) => {
   }
   // for youtube open(newslater) end
 
-  const url = 'http://localhost:3034'
-  // const url = 'https://vhx-backend.vercel.app/'
+  // const url = 'http://localhost:3034'
+  const url = 'https://vhback.vercel.app'
 // 
 
   const [passModalOpen,setPassModalOpen] = useState(true);
